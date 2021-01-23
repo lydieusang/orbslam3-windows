@@ -90,3 +90,5 @@ ORB_SLAM3 IN WINDOWS 10, VISUAL STUDIO 2019
 	path_to_times_file
 	path_to_imu_data
 	trajectory_file_name
+- Result
+![alt text](https://github.com/ds-ly/orbslam3-windows/blob/master/example_stereo_intertial_tum_vi.png)
