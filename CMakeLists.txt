@@ -34,8 +34,9 @@ elseif(COMPILER_SUPPORTS_CXX0X)
 endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+set(OpenCV_DIR D:/orbslam3-windows-master/Thirdparty/Opencv/opencv/build)#…Ë÷√¬∑æ∂
+find_package(OpenCV 3.0 REQUIRED)
 
-find_package(OpenCV 3)
 if(NOT OpenCV_FOUND)
    find_package(OpenCV 2.4.3 QUIET)
    if(NOT OpenCV_FOUND)
@@ -192,4 +193,6 @@ add_executable(stereo_inertial_tum_vi
 Examples/Stereo-Inertial/stereo_inertial_tum_vi.cc)
 target_link_libraries(stereo_inertial_tum_vi ${PROJECT_NAME})
 
+add_executable(myvideo Examples/Monocular/myvideo.cpp)
+target_link_libraries(myvideo ${PROJECT_NAME})
 
